@@ -1,0 +1,20 @@
+<template>
+    <div style="border:solid">
+        <h1 class="slds-text-heading_large">List component</h1>
+        <h1>{mode} mode</h1>
+        <lightning-button label="View" onclick={handleClick}></lightning-button>
+        <lightning-button label="Edit" onclick={handleClick}></lightning-button>    
+        <lightning-card>
+            <template if:true={accounts.data}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={accounts.data}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                >
+            </lightning-datatable>
+            </template>
+        </lightning-card>
+    </div>
+</template>

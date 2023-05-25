@@ -1,0 +1,8 @@
+<template>
+    <div style="border:solid">
+        <h1 class="slds-text-heading_large">Search component</h1>
+        <lightning-input type="text" data-id="accName" label="Search Account by Name"></lightning-input><br>
+        <lightning-button data-id="btnSearch" label="Search" onclick={handleClick}></lightning-button><br>
+        <c-account-list account-to-search={accountName} onmodechange={handleModeChange}></c-account-list>
+    </div>
+</template>
