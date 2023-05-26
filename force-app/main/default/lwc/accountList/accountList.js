@@ -29,9 +29,7 @@ export default class AccountList extends LightningElement {
             detail: this.mode
         });      
         this.dispatchEvent(clickEvent);        
-
-        
-        console.log(this.mode);
+                
         if (this.mode == 'View'){
             console.log('view');
             this.columns[1].editable = false;
@@ -44,12 +42,7 @@ export default class AccountList extends LightningElement {
             this.columns[2].editable = true;
             this.columns = [...this.columns];
         }        
-    }
-
-    columnEditable(colNum, isEditable) {
-        this.columns[colNum].editable = isEditable;
-        this.columns = [...this.columns];
-    }
+    }   
 
     async handleSave(event) {
         const updatedFields = event.detail.draftValues;
